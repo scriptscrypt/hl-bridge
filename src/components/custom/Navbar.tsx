@@ -5,7 +5,7 @@ import hlLogo from "@/assets/logos/hlLogowTxt.svg";
 
 const Navbar = () => {
   return (
-    <div className="">
+    <div className="bg-[#001F14]">
       <nav className="w-full bg-[#001F14] bg-black/30 backdrop-blur-md border-b border-gray-800/50 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">

@@ -6,10 +6,12 @@ import StatsSection from "@/components/custom/StatsSection";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <StatsSection />
-      <Footer />
+      <div className="flex flex-col">
+        <Navbar />
+        <Hero />
+        <StatsSection />
+        <Footer />
+      </div>
     </>
   );
 }

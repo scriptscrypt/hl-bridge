@@ -1,13 +1,12 @@
-import React from "react";
+import hlLogo from "@/assets/logos/hlLogowTxt.svg";
+import { MessageSquare, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { MessageSquare, Twitter } from "lucide-react";
-import hlLogo from "@/assets/logos/hlLogowTxt.svg";
 const Footer = () => {
   return (
     <div className="h-[104px] bg-[#001F14] relative">
-      <div className="absolute inset-0 z-10 opacity-20">
-        <div className="w-full h-full bg-[url('/footerHL.svg')] z-50 bg-repeat-x bg-top "></div>
+      <div className="absolute inset-0 z-10 opacity-60 backdrop:blur-lg">
+        <div className="w-full h-full bg-[url('/bgs/footerHL.svg')] z-50 bg-repeat-x bg-top "></div>
       </div>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="">
@@ -40,7 +39,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <footer className="w-full h-full bg-[#001F14] z-50">
+      <footer className="w-full bg-[#001F14] z-50">
         {/* Background Pattern - You might want to use an actual SVG or image here */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
