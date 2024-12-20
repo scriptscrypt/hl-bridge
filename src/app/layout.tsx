@@ -22,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${redaction.variable} ${redactionBold.variable} ${redactionItalic.className} ${inter.className}`}
-      ></body>
+        className={`${inter.className} ${redaction.variable} ${redactionBold.variable} ${redactionItalic.variable} `}
+      >
+        {children}
+      </body>
     </html>
   );
 }
