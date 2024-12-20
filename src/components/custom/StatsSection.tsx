@@ -31,14 +31,12 @@ const StatsSection = () => {
           {/* Left Column - Text Content */}
           <div className="flex flex-col gap-8 flex-1">
             <h1 className="text-5xl lg:text-6xl text-white font-serif">
-              Trusted by <span className="font-redactionItalic">Millions</span>.
+              Enter the{" "}
+              <span className="font-redactionItalic">people's L1 </span>.
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-              The high-performance chain redefining crypto trading. Experience
-              lightning -fast transactions
-              <br />
-              —all on a single, hyper-efficient platform. Build, trade, and
-              create value without limits.
+              Bridge your assets to the Hyperliquid L1
+              <br />— in a trustless, safe and transparent manner
             </p>
             <div className="flex justify-between">
               <Button className="flex items-center justify-center bg-transparent border-[#285F50] bg-[#022A1F] text-[#98FCE4] border rounded-full hover:bg-emerald-400/10 transition-colors duration-200">
@@ -50,22 +48,22 @@ const StatsSection = () => {
 
           {/* Right Column - Stats Grid */}
           {/* <div className="flex-1"> */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex-1 min-w-[240px] max-w-[240px]">
-                <StatsCard title="All time volume" value="$2.2T" />
-              </div>
-              <div className="flex-1 min-w-[240px] max-w-[240px]">
-                <StatsCard title="Total Deposits" value="$2.2T" />
-              </div>
-              <div className="flex-1 min-w-[240px] max-w-[240px]">
-                <StatsCard title="Total Users" value="$2.2T" />
-              </div>
-              <div className="flex-1 min-w-[240px] max-w-[240px]">
-                <StatsCard title="Volume Bridged" value="$2.2T" />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex-1 min-w-[240px] max-w-[240px]">
+              <StatsCard title="All time volume" value="$2.2T" />
+            </div>
+            <div className="flex-1 min-w-[240px] max-w-[240px]">
+              <StatsCard title="Total Deposits" value="$2.2T" />
+            </div>
+            <div className="flex-1 min-w-[240px] max-w-[240px]">
+              <StatsCard title="Total Users" value="$2.2T" />
+            </div>
+            <div className="flex-1 min-w-[240px] max-w-[240px]">
+              <StatsCard title="Volume Bridged" value="$2.2T" />
             </div>
           </div>
         </div>
+      </div>
       {/* </div> */}
     </div>
   );

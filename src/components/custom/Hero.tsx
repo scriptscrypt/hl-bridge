@@ -1,3 +1,5 @@
+import DeBridgeWidget from "@/components/custom/BridgeWidget/Debridge";
+
 const Hero = () => {
   return (
     <>
@@ -7,6 +9,9 @@ const Hero = () => {
           <div className="font-redactionItalic ml-4">Hyperliquid</div>
         </div>
         <div className="font-redaction">Anytime, Anywhere</div>
+        <div className="mt-8">
+          <DeBridgeWidget />
+        </div>
       </div>
     </>
   );
