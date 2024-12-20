@@ -32,7 +32,7 @@ const StatsSection = () => {
           <div className="flex flex-col gap-8 flex-1">
             <h1 className="text-5xl lg:text-6xl text-white font-serif">
               Enter the{" "}
-              <span className="font-redactionItalic">people's L1 </span>.
+              <span className="font-redactionItalic">people&apos;s L1 </span>.
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
               Bridge your assets to the Hyperliquid L1
