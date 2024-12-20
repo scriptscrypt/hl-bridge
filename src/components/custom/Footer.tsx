@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <div className="h-[104px] bg-[#001F14] relative">
+    <div className="h-[104px]  md:h-[120px] bg-[#001F14] relative">
       <div className="absolute inset-0 z-10 opacity-60 backdrop:blur-lg">
-        <div className="w-full h-full bg-[url('/bgs/footerHL.svg')] z-50 bg-repeat-x bg-top "></div>
+        <div className="w-full h-full bg-[url('/bgs/footerHL.svg')] z-50 bg-repeat-x bg-top"></div>
       </div>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="">
