@@ -51,10 +51,10 @@ const StatsSection = () => {
           {/* Right Column - Stats Grid */}
           <div className="w-full lg:w-auto lg:flex-1 px-0 md:px-4 lg:px-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-3xl md:mx-auto lg:mx-0">
-              <StatsCard title="All time volume" value="$2.2T" />
-              <StatsCard title="Total Deposits" value="$2.2T" />
-              <StatsCard title="Total Users" value="$2.2T" />
-              <StatsCard title="Volume Bridged" value="$2.2T" />
+              <StatsCard title="All time volume" value="$547.6T" />
+              <StatsCard title="Total Deposits" value="$11.8T" />
+              <StatsCard title="Total Users" value="$9.7T" />
+              <StatsCard title="Volume Bridged" value="$14.2T" />
             </div>
           </div>
         </div>
