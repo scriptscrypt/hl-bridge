@@ -9,16 +9,15 @@ import {
 
 const inter = Inter({ subsets: ["latin"] });
 
-
 export const metadata: Metadata = {
   title: "Hyperliquid Bridge",
   description: "Experience Hyperliquid Anytime, Anywhere",
   keywords: ["Hyperliquid", "hyperliquid", "bridge", "Hyperliquid Bridge"],
-  authors: [{ name: "hyperliquid", url: "" }],
+  authors: [{ name: "hyperliquid", url: "https://hyperfoundation.org" }],
   openGraph: {
     title: "Hyperliquid Bridge",
     description: "Experience Hyperliquid Anytime, Anywhere",
-    url: "",
+    url: "https://hyperfoundation.org",
     siteName: "Hyperliquid Bridge",
     images: [
       {
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     description: "Experience Hyperliquid Anytime, Anywhere",
     images: ["/og.png"],
   },
-  metadataBase: new URL(""),
+  metadataBase: new URL("https://hyperfoundation.org/"),
 };
 
 export default function RootLayout({

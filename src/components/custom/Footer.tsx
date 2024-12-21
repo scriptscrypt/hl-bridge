@@ -31,14 +31,14 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-6 mt-6 md:mt-0">
               <Link
-                href="#"
+                href=""
                 className="text-gray-300 hover:text-emerald-400 transition-colors"
                 aria-label="Telegram"
               >
                 <MessageSquare size={24} />
               </Link>
               <Link
-                href="#"
+                href=""
                 className="text-gray-300 hover:text-emerald-400 transition-colors"
                 aria-label="Discord"
               >
@@ -47,7 +47,7 @@ const Footer = () => {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href=""
                 className="text-gray-300 hover:text-emerald-400 transition-colors"
                 aria-label="Twitter"
               >
@@ -63,13 +63,13 @@ const Footer = () => {
             </div>
             <div className="flex gap-8 text-gray-300 text-sm order-1 md:order-2 mb-4 md:mb-0">
               <Link
-                href="/privacy"
+                href=""
                 className="hover:text-emerald-400 transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="/terms"
+                href=""
                 className="hover:text-emerald-400 transition-colors"
               >
                 Terms of Service
