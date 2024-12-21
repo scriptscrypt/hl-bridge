@@ -34,7 +34,7 @@ const Hero = () => {
         {/* Widget Container with Fixed Height */}
         <div className="w-full max-w-xl mx-auto">
           <div className="bg-[#001F14]/80 rounded-xl backdrop-blur-sm border border-[#044738] shadow-2xl">
-            <div className="h-[600px] overflow-hidden">
+            <div className="h-[800px] overflow-hidden">
               <DeBridgeWidget />
             </div>
           </div>
