@@ -2,7 +2,7 @@ import DeBridgeWidget from "@/components/custom/BridgeWidget/Debridge";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen bg-[#001F14] text-white overflow-hidden">
+    <div className="relative min-h-screen bg-[#001F14] text-white overflow-hidden pt-16">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Single full-width background image */}

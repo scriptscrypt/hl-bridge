@@ -5,11 +5,14 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#001F14] relative">
+    <footer className="bg-[#001F14]/80 backdrop-blur-md relative">
       {/* Background Pattern */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-10">
         <div className="w-full h-full bg-[url('/bgs/footerHL.svg')] bg-repeat-x bg-top opacity-30" />
       </div>
+
+      {/* Glass Overlay */}
+      <div className="absolute inset-0 bg-[#001F14]/20 backdrop-blur-sm" />
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -18,7 +21,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <div className="flex flex-col space-y-4">
               <Image src={hlLogo} alt="Hyperliquid Bridge" className="w-56" />
-              <p className="font-inter text-sm text-gray-400 max-w-lg">
+              <p className="font-inter text-sm text-gray-300 max-w-lg">
                 We are not affiliated with Hyperliquid Core or HyperFDN. A
                 community built bridge to help everyone own a piece of Hype
                 today!
@@ -29,14 +32,14 @@ const Footer = () => {
             <div className="flex items-center gap-6 mt-6 md:mt-0">
               <Link
                 href="#"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-gray-300 hover:text-emerald-400 transition-colors"
                 aria-label="Telegram"
               >
                 <MessageSquare size={24} />
               </Link>
               <Link
                 href="#"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-gray-300 hover:text-emerald-400 transition-colors"
                 aria-label="Discord"
               >
                 <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
@@ -45,7 +48,7 @@ const Footer = () => {
               </Link>
               <Link
                 href="#"
-                className="text-gray-400 hover:text-emerald-400 transition-colors"
+                className="text-gray-300 hover:text-emerald-400 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={24} />
@@ -55,10 +58,10 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#285F50]/30">
-            <div className="text-gray-400 text-sm order-2 md:order-1">
+            <div className="text-gray-300 text-sm order-2 md:order-1">
               © 2024 Hyperliquid Bridge. All right reserved.
             </div>
-            <div className="flex gap-8 text-gray-400 text-sm order-1 md:order-2 mb-4 md:mb-0">
+            <div className="flex gap-8 text-gray-300 text-sm order-1 md:order-2 mb-4 md:mb-0">
               <Link
                 href="/privacy"
                 className="hover:text-emerald-400 transition-colors"
