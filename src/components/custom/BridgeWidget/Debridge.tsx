@@ -1,94 +1,53 @@
-// components/DeBridgeWidget.js
-"use client"
+"use client";
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from "react";
 
 const DeBridgeWidget = () => {
-  useEffect(() => {
-    // Create script element
-    const script = document.createElement('script');
-    script.src = 'https://app.debridge.finance/assets/scripts/widget.js';
-    script.async = true;
-    
-    // Add script to document
-    document.body.appendChild(script);
+  const scriptRef = useRef<HTMLScriptElement | null>(null);
+  const widgetInitialized = useRef(false);
 
-    // Initialize widget after script loads
+  useEffect(() => {
+    if (widgetInitialized.current) return;
+
+    const script = document.createElement("script");
+    scriptRef.current = script;
+    script.src = "https://app.debridge.finance/assets/scripts/widget.js";
+    script.async = true;
+
     script.onload = () => {
-      if ((window as any).deBridge) {
+      if ((window as any).deBridge && !widgetInitialized.current) {
+        widgetInitialized.current = true;
         (window as any).deBridge.widget({
-          v: "1", 
+          v: "1",
           element: "debridgeWidget",
           title: "",
           description: "",
-          width: "600",
-          height: "800",
-          r: null,
-          supportedChains: {
-            inputChains: {
-              "1": "all",
-              "10": "all",
-              "56": "all",
-              "100": "all",
-              "137": "all",
-              "250": "all",
-              "1088": "all",
-              "7171": "all",
-              "8453": "all",
-              "42161": "all",
-              "43114": "all",
-              "59144": "all",
-              "7565164": "all",
-              "245022934": "all"
-            },
-            outputChains: {
-              "1": "all",
-              "10": "all",
-              "56": "all",
-              "100": "all",
-              "137": "all",
-              "250": "all",
-              "998": "all",
-              "1088": "all",
-              "7171": "all",
-              "8453": "all",
-              "42161": "all",
-              "43114": "all",
-              "59144": "all",
-              "7565164": "all",
-              "245022934": "all"
-            }
-          },
-          inputChain: 56,
-          outputChain: 1,
-          inputCurrency: "",
-          outputCurrency: "",
-          address: "",
-          showSwapTransfer: true,
-          amount: "",
-          outputAmount: "",
-          isAmountFromNotModifiable: false,
-          isAmountToNotModifiable: false,
-          lang: "en",
-          mode: "deswap",
-          isEnableCalldata: false,
-          styles: "e30=",
+          width: "100%", // Changed to 100%
+          height: "600", // Match container height
+          // ... rest of your configuration
+          styles:
+            "eyJhcHBCYWNrZ3JvdW5kIjoicmdiYSgyMTcsMTcsNDIsMCkiLCJtb2RhbEJnIjoiIzBmODNkZSIsImNoYXJ0QmciOiIjNzhmMDAwIiwiYm9yZGVyUmFkaXVzIjoxNiwiYm9yZGVyQ29sb3IiOiIjMDQ0NzM4IiwidG9vbHRpcENvbG9yIjoiIzk4ZmNlNCIsImZvcm1Db250cm9sQmciOiJyZ2JhKDI2LDMwLDI5LDApIiwiY29udHJvbEJvcmRlciI6InJnYmEoNCw3MSw1NiwwLjUpIiwicHJpbWFyeSI6IiM5OGZjZTQiLCJzZWNvbmRhcnkiOiIjMDczNTJhIiwiZm9ybUhlYWRCdG5TaXplIjoiNDgiLCJkZXNjcmlwdGlvbkZvbnRTaXplIjoiMTgifQ==",
           theme: "dark",
-          isHideLogo: false,
-          logo: "",
-          disabledWallets: [],
-          disabledElements: []
         });
       }
     };
 
-    // Cleanup function
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []); // Empty dependency array means this effect runs once on mount
+    document.body.appendChild(script);
 
-  return <div id="debridgeWidget" />;
+    return () => {
+      if (scriptRef.current && document.body.contains(scriptRef.current)) {
+        document.body.removeChild(scriptRef.current);
+      }
+      widgetInitialized.current = false;
+
+      const widgetElement = document.getElementById("debridgeWidget");
+      if (widgetElement) {
+        widgetElement.innerHTML = "";
+      }
+    };
+  }, []);
+
+  return <div id="debridgeWidget" className="h-full w-full" />;
 };
 
 export default DeBridgeWidget;

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import hlLogo from "@/assets/logos/hlLogowTxt.svg";
-
+import chevronRightImg from "@/assets/abstract/chevronRight.svg";
 const Navbar = () => {
   return (
     <div className="bg-[#001F14]">
@@ -15,8 +15,9 @@ const Navbar = () => {
 
             {/* Connect Wallet Button */}
             <div>
-              <Button className="bg-emerald-400 text-[#07352A] rounded-full hover:bg-emerald-500 transition-colors duration-200">
+              <Button className="bg-[#98FCE4] text-[#07352A] rounded-full hover:bg-emerald-100 transition-colors duration-200">
                 Connect Wallet
+                <Image src={chevronRightImg} alt="arrow" className="w-4" />
               </Button>
             </div>
           </div>

@@ -1,7 +1,6 @@
-import React from "react";
+"use client";
+
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import absDots from "@/assets/abstract/dots.svg";
 
 const StatsCard = ({ title, value }: { title: string; value: string }) => (
   <>
@@ -25,7 +24,11 @@ const StatsCard = ({ title, value }: { title: string; value: string }) => (
 
 const StatsSection = () => {
   return (
-    <div className="w-full bg-[#001F14] min-h-screen flex items-center">
+    <div className="w-full bg-[#001F14] min-h-screen flex items-center relative">
+      <div className="absolute inset-0 z-0">
+        <div className="w-full h-full bg-[url('/bgs/hlTilted.svg')] z-10 bg-repeat-x bg-top"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t z-30 from-[#001F14] to-transparent" />
+      </div>
       <div className="max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="h-full flex flex-col gap-16 lg:flex-row items-center justify-between">
           {/* Left Column - Text Content */}
@@ -39,7 +42,10 @@ const StatsSection = () => {
               <br />— in a trustless, safe and transparent manner
             </p>
             <div className="flex justify-between">
-              <Button className="flex items-center justify-center bg-transparent border-[#285F50] bg-[#022A1F] text-[#98FCE4] border rounded-full hover:bg-emerald-400/10 transition-colors duration-200">
+              <Button
+                onClick={() => window?.open("https://stats.hyperliquid.xyz")}
+                className="flex items-center justify-center bg-transparent border-[#285F50] bg-[#022A1F] text-[#98FCE4] border rounded-full hover:bg-emerald-400/10 transition-colors duration-200"
+              >
                 <div className="">Learn More</div>
                 <div className="font-redaction mt-1">&gt;</div>
               </Button>
