@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   title: "Hyperliquid Bridge",
   description: "Experience Hyperliquid Anytime, Anywhere",
   keywords: ["Hyperliquid", "hyperliquid", "bridge", "Hyperliquid Bridge"],
-  authors: [{ name: "hyperliquid", url: "https://hyperfoundation.org" }],
+  authors: [{ name: "hyperliquid", url: "https://www.hyperliquidbridge.com" }],
   openGraph: {
     title: "Hyperliquid Bridge",
     description: "Experience Hyperliquid Anytime, Anywhere",
-    url: "https://hyperfoundation.org",
+    url: "https://www.hyperliquidbridge.com",
     siteName: "Hyperliquid Bridge",
     images: [
       {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Experience Hyperliquid Anytime, Anywhere",
     images: ["/og.png"],
   },
-  metadataBase: new URL("https://hyperfoundation.org/"),
+  metadataBase: new URL("https://www.hyperliquidbridge.com"),
 };
 
 export default function RootLayout({
