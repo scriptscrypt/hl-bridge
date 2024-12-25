@@ -19,6 +19,8 @@ const DeBridgeWidget = () => {
         width: "100%",
         height: "100%",
         r: "30912",
+        affiliateFeePercent : 1,
+        affiliateFeeRecipient: "0x0CF97e9C28C5b45C9Dc20Dd8c9d683E0265190CB",
         supportedChains: {
           inputChains: {
             "1": "all",
