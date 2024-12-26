@@ -6,6 +6,7 @@ import {
   redactionBold,
   redactionItalic,
 } from "@/assets/fonts/fonts-custom";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,6 +51,7 @@ export default function RootLayout({
         className={`${inter.className} ${redaction.variable} ${redactionBold.variable} ${redactionItalic.variable} `}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
