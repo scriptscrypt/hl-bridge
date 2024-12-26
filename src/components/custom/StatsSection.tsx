@@ -54,7 +54,7 @@ const StatsSection = () => {
                 <StatsCard title="All time volume" value="$571.2T" />
                 <StatsCard title="Total Deposits" value="$13.5T" />
                 <StatsCard title="Total Users" value="$11.5T" />
-                <StatsCard title="Volume Bridged" value="$14.8T" />
+                <StatsCard title="Volume Bridged" value="$326K" />
               </div>
           </div>
         </div>
